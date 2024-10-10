@@ -1,0 +1,292 @@
+/* Basic styling for the body */
+* {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* Hero section */
+
+.hero{
+    position: relative;
+    display: block;
+    z-index: 2; 
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.hero_container{
+    height: : 100vh;
+    width: 100vw;
+    background: gray;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    flex flex-direction: column;
+    position: fixed;
+    margin: 10px
+    
+}
+
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 10px;
+    display: flex; /* Align items in a row */
+    justify-content: space-around; /* Evenly space the items */
+  }
+  
+  /* Style for the links */
+  nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* White text */
+    padding: 10px 20px; /* Add padding around links */
+    display: block;
+    text-decoration: underline;
+  }
+
+  nav ul li a:hover {
+    background-color: grey; /* Change background on hover */
+    padding-block: 10%;
+  }
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 80px;
+    cursor: pointer;
+    color:#0056b3;
+    
+}
+
+
+
+/*button*/
+
+.download-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+</style>
+
+
+/* Button a disabled*/
+/* Style for the button */
+.download-btn {
+    text-decoration: none; /* Remove default underline */
+    color: black; /* Default color */
+    background-color: #333; /* Background color */
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Disabled state styling */
+.download-btn.disabled {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: gray; /* Change color to indicate it's disabled */
+    pointer-events: none; /* Disable clicking */
+    opacity: 0.6; /* Make it look faded */
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual timeline item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Timeline content box */
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-left: 20px;
+}
+
+/* Position the timeline dots */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    z-index: 2;
+    border: 2px solid white;
+}
+
+/* Styling for the timeline content */
+.timeline-content h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+/* Left and Right Alignment for alternate items */
+.timeline-item:nth-child(odd) .timeline-content {
+    left: calc(50% - 580px); /* Adjust width for alignment */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 40px); /* Adjust width for alignment */
+}
+
+/* Responsive timeline for small screens */
+@media (max-width: 768px) {
+    .timeline-item::before {
+        left: 20px;
+    }
+
+    .timeline-item::after {
+        left: 20px;
+    }
+
+    .timeline-content {
+        left: 50px;
+        width: calc(100% - 70px);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        left: 50px;
+    }
+}
+
+
+/* Blog post */
+
+.blog-post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+
+.introduction{
+    position: relative;
+    top: 15%;
+    left: 5%;
+}
+.introduction h3{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.introduction h3 span{
+    color: #0056b3;
+    font-size: large;
+}
+
+.hero-image{
+    position: relative;
+    width: 30%;
+    height: auto;
+    top: 5px;
+    right: 80px;
+}
+
+.hero-image img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+

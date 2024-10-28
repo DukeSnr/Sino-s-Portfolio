@@ -97,7 +97,7 @@ nav ul {
     text-decoration: none; /* Remove default underline */
     color: black; /* Default color */
     background-color: #333; /* Background color */
-    padding: 10px 20px;
+    padding: 10px 40px;
     display: inline-block;
     border-radius: 5px;
 }

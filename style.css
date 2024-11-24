@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+   scroll-behavior: smooth;
 }
 
 /* Hero section */
@@ -293,4 +293,38 @@ nav ul {
     height: auto;
 }
 
-.
+div.a {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+  }
+  
+  div.b {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+    border: 3px solid blue;
+  } 
+
+
+  /* Styles for tablets (screen width <= 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/* Styles for mobile phones (screen width <= 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        margin: 5px;
+    }

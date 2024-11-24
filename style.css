@@ -31,11 +31,10 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
-    flex-direction: column;
+    padding: 0px 100px;
+    flex-direction: row;
     position: fixed;
     margin: 10px
-    
 }
 
 
@@ -44,6 +43,7 @@ nav ul {
     padding: 10px;
     display: flex; /* Align items in a row */
     justify-content: space-around; /* Evenly space the items */
+    justify-items: center;
   }
   
   /* Style for the links */
